@@ -1,13 +1,12 @@
 package com.example.androidformsfirestore;
 
-/**-- This Application contains all the operations required
- *   to perform DML operations in Database <MySQL>
- *   @Server: WAMP Server
- *   @Database: Reference Languages: pHp and MySQL
+/**
+ * -- This Application contains all the operations required
+ * to perform DML operations in Database <NoSQL>
+ *
+ * @Server: Firebase
+ * @Database: Reference Languages: Cloud Firestore and NoSQL
  **/
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -17,6 +16,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
@@ -24,7 +26,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class MainActivity extends AppCompatActivity {
     public static final String GENDER = "Gender";
@@ -32,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
     public static final String USERNAME = "Username";
     public static final String FULL_NAME = "Full name";
     public static final String PASSWORD = "Password";
+
     EditText fullname, username, email, password, confirmPassword, gender;
     String getSelectedUser, getfullname, getusername, getemail, getpassword, getconfirmPassword, getgender;
+
     FirebaseFirestore database;
     Spinner userType;
     AlertDialog alertDialog;
