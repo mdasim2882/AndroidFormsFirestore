@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/text_title_updated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="Profile"
+        android:textSize="24sp" />
+    <TextView
+        android:layout_marginTop="100dp"
+        android:id="@+id/details_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title_updated"
+        android:layout_centerInParent="true"
+        android:padding="5dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/update_info_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Info"
+        android:onClick="updateMyInfo"
+        android:layout_below="@id/details_user"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/delete_info_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete my profile"
+        android:onClick="deleteMyInfo"
+        android:layout_below="@id/update_info_btn"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
